@@ -1,0 +1,73 @@
+Learnings from Recent Python and Data Visualization Project of Diwali Sales Analysis
+
+Setting Figure Size in Seaborn:
+Learned how to set the figure size for plots in Seaborn using sns.set(rc={'figure.figsize':(width, height)}).
+
+Learned to group data by a specific column and aggregate values using Pandas. 
+For example:df.groupby(['column_name'], as_index=False)['column_to_sum'].sum()
+
+
+Sorting and Selecting Top N Entries:
+Learned to sort data by a specific column and select the top N entries:
+df.sort_values(by='column_name', ascending=False).head(N)
+
+Creating Bar Plots with Seaborn:
+Learned to create bar plots using Seaborn's barplot function:
+sns.barplot(x='x_column', y='y_column', data=df)
+
+Rotating X-Axis Tick Labels:
+Learned to rotate x-axis tick labels for better readability using Matplotlib's plt.xticks function:
+plt.xticks(rotation=45)
+
+Adding Labels to Bars in Seaborn:
+Learned to add labels to bars in a Seaborn plot using the ax.bar_label method:for bars in ax.containers:
+                                                                                  ax.bar_label(bars)
+
+Filtering DataFrame by Top Categories:
+Learned to filter a DataFrame to include only the top N categories:
+top_categories = df['column_name'].value_counts().nlargest(N).index
+df_filtered = df[df['column_name'].isin(top_categories)]
+
+Using Matplotlib for Simple Plots:
+Learned to use Matplotlib directly for simple bar plots:
+df['column_name'].value_counts().nlargest(N).plot(kind='bar')
+
+Combining Seaborn and Matplotlib:
+Learned to combine Seaborn for creating plots and Matplotlib for customizing plots.
+
+Debugging Common Errors:
+Encountered and resolved common errors such as NameError by ensuring correct function calls (e.g., using plt.xticks instead of plot.xticks).
+
+Setting Up Seaborn Styles:
+Learned to set up Seaborn styles for consistent and attractive visualizations:
+sns.set_style("whitegrid")
+
+Adjusting Plot Aesthetics:
+Learned to adjust plot aesthetics, such as adding titles and labels:
+plt.title('Title of the Plot')
+plt.xlabel('X-axis Label')
+plt.ylabel('Y-axis Label')
+
+Customizing Bar Plot Colors:
+Learned to customize the colors of the bars in a Seaborn bar plot:
+sns.barplot(x='x_column', y='y_column', data=df, palette='viridis')
+
+Handling Missing Values:
+Learned to handle missing values in the DataFrame:
+df.dropna(subset=['column_name'], inplace=True)
+
+Selecting Specific Columns:
+Learned to select specific columns from the DataFrame for analysis:
+selected_columns = df[['column1', 'column2', 'column3']]
+
+Using Count Plots in Seaborn:
+Learned to create count plots to visualize the frequency of categories:
+sns.countplot(x='column_name', data=df)
+
+Adjusting Bar Width in Seaborn:
+Learned to adjust the width of bars in Seaborn bar plots:
+sns.barplot(x='x_column', y='y_column', data=df, ci=None)
+
+Using Pandas Plotting Capabilities:
+Learned to leverage Pandas' built-in plotting capabilities for quick visualizations:
+df['column_name'].plot(kind='hist')
