@@ -4,7 +4,7 @@ This project provides an in-depth analysis of Diwali sales data, delivering insi
 
 ---
 
-## Project Overview
+## Project Objective
 
 The goal of this project is to analyze Diwali sales data to understand customer preferences and identify sales trends. The analysis includes data cleaning, visualization, and extracting insights that are valuable for targeted marketing and improved customer engagement.
 
